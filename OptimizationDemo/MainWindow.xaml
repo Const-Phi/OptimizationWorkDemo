@@ -1,0 +1,40 @@
+﻿<Window x:Class="OptimizationDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- Константы в коде - это плохо! -->
+        <TextBlock Text="Название" Grid.Row="0" Grid.Column="0" />
+        <TextBlock Text="Значение" Grid.Row="0" Grid.Column="1" />
+
+        <!-- Константа в коде -  это плохо! -->
+        <TextBlock Text="Left" Grid.Row="1" Grid.Column="0" />
+        <TextBox x:Name="LeftBoundInput" Grid.Row="1" Grid.Column="1" />
+
+        <!-- Константа в коде -  это плохо! -->
+        <TextBlock Text="Right" Grid.Row="2" Grid.Column="0" />
+        <TextBox x:Name="RightBoundInput" Grid.Row="2" Grid.Column="1" />
+
+        <!-- Константа в коде -  это плохо! -->
+        <TextBlock Text="Length" Grid.Row="3" Grid.Column="0" />
+        <TextBox x:Name="LenghtOutput" IsReadOnly="True" Grid.Row="3" Grid.Column="1" />
+        
+        <!-- Константа в коде -  это плохо! -->
+        <TextBlock Text="Factor" Grid.Row="4" Grid.Column="0" />
+        <TextBox x:Name="Factor" Grid.Row="4" Grid.Column="1" />
+    </Grid>
+</Window>
