@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OptimizationLibrary
+namespace ReflectionLibrary
 {
     public sealed class SenderWrapper
     {

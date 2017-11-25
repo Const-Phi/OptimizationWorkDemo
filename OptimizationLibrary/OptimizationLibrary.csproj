@@ -38,12 +38,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SenderWrapper.cs" />
     <Compile Include="Exceptions\FieldNotSetYetException.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Range.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReflectionLibrary\ReflectionLibrary.csproj">
+      <Project>{40dd7b8c-b3d2-444f-a8f8-b8ad61eab4ca}</Project>
+      <Name>ReflectionLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

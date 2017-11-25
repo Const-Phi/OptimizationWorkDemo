@@ -70,6 +70,10 @@
       <Project>{55883266-5ce7-40ee-bf7b-3033277cd0ec}</Project>
       <Name>OptimizationLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ReflectionLibrary\ReflectionLibrary.csproj">
+      <Project>{40dd7b8c-b3d2-444f-a8f8-b8ad61eab4ca}</Project>
+      <Name>ReflectionLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizationDemo", "Optimiz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizationLibrary", "OptimizationLibrary\OptimizationLibrary.csproj", "{55883266-5CE7-40EE-BF7B-3033277CD0EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionLibrary", "ReflectionLibrary\ReflectionLibrary.csproj", "{40DD7B8C-B3D2-444F-A8F8-B8AD61EAB4CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{55883266-5CE7-40EE-BF7B-3033277CD0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55883266-5CE7-40EE-BF7B-3033277CD0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55883266-5CE7-40EE-BF7B-3033277CD0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DD7B8C-B3D2-444F-A8F8-B8AD61EAB4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DD7B8C-B3D2-444F-A8F8-B8AD61EAB4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DD7B8C-B3D2-444F-A8F8-B8AD61EAB4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DD7B8C-B3D2-444F-A8F8-B8AD61EAB4CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

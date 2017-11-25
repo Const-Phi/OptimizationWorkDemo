@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using OptimizationLibrary;
+using ReflectionLibrary;
 
 namespace OptimizationDemo
 {
@@ -71,35 +72,12 @@ namespace OptimizationDemo
             target.SetBinding(targetProperty, binding);
         }
 
-        private static String GetInfo(Object sender, String propertyName)
-        {
-            // prepare to recursion part of reflection algorithm
-            if (sender is SenderWrapper wrapper)
-            {
-                var outerSenderType = wrapper.OuterSender.GetType();
-                var innerSenderType = wrapper.InnerSender.GetType();
-                var changedValue = innerSenderType.GetProperty(propertyName)?.GetValue(wrapper.InnerSender);
-
-                return
-                    $"{outerSenderType.FullName} / {innerSenderType.FullName} / property \"{propertyName}\" changed.{Environment.NewLine}New value is [{changedValue}].{Environment.NewLine}Object is {sender}.";
-            }
-
-            // base part of reflection algorithm
-            var senderType = sender.GetType();
-            var senderTypeName = senderType.FullName;
-            var changedProperty = senderType.GetProperty(propertyName);
-            var changedPropertyValue = changedProperty?.GetValue(sender);
-
-            return
-                $"{senderTypeName} property \"{propertyName}\" changed.{Environment.NewLine}New value is [{changedPropertyValue}].{Environment.NewLine}Object is {sender}.";
-        }
-
         private static void UserInput_OnLostFocus(Object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
             try
             {
                 MessageBox.Show(
-                    GetInfo(sender, propertyChangedEventArgs.PropertyName),
+                    ReflectionWalker.GetFullPath(sender, propertyChangedEventArgs.PropertyName),
                     "Reflection Info",
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
